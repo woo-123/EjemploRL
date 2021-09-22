@@ -12,5 +12,7 @@ namespace EjemploRL.Data
             : base(options)
         {
         }
+
+        public DbSet<EjemploRL.Models.Registro> DataContactos {get; set;}
     }
 }

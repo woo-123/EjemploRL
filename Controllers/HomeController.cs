@@ -23,7 +23,7 @@ namespace EjemploRL.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult AboutUS()
         {
             return View();
         }
