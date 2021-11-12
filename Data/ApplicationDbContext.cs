@@ -14,5 +14,6 @@ namespace EjemploRL.Data
         }
 
         public DbSet<EjemploRL.Models.Registro> DataContactos {get; set;}
+         public DbSet<EjemploRL.Models.Catalogo> DataProducts { get; set; }
     }
 }

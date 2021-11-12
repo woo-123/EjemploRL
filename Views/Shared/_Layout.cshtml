@@ -4,52 +4,69 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - EjemploRL</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/ejemplopagina.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EjemploRL</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+        <img class="logo" src="~/images/logo.png" ><a href="Home/Index"></a></img>
+            <nav class="nav">
+                    <ul class="nav-ul">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link"  asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUS">About US</a>
+                            <a class="nav-link"  href="#nosotros">About US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="Index">Lista</a>
+                            <a class="nav-link"  asp-controller="Registro" asp-action="Index">Lista</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="Create">Registro</a>
+                            <a class="nav-link"  asp-controller="Registro" asp-action="Create">Registro</a>
+                        </li>
+                        
+                        <li class='nav-item catalogo'> 
+                            <a class="nav-link" > Catalogo <i class="fas fa-arrow-right"></i></a> 
+                            <ul class='nav-ul-sub'>
+                                <li><a href="">dasdas</a></li>
+                                <li><a href="">dasds</a></li>
+                                <li><a href="">dasds</a></li>
+                                <li><a href="">dasds</a></li>
+                                <li><a href="">dasds</a></li>
+                                <li><a href="">dasds</a></li>
+                            </ul>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
+                
+            </nav>
+            <div class='bar'><a><i class="fas fa-bars"></i></a></div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    
+        
+    
+    
+    <main role="main">
             @RenderBody()
-        </main>
-    </div>
+    </main>
+    
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - EjemploRL - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="footer-contenedor">
+            &copy; 2021 - EjemploRL -
+             <a href="https://www.facebook.com" class='redes'><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.whatsapp.com/?lang=es" class='redes'><i class="fab fa-whatsapp-square"></i></a>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/ff59d8ddce.js" crossorigin="anonymous"></script>
+    
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/app.js" asp-append-version="true"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

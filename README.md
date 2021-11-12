@@ -16,3 +16,11 @@ dotnet aspnet-codegenerator identity -dc EjemploRL.Data.ApplicationDbContext --f
 
 dotnet tool update --global dotnet-ef --version 5.0.9
 
+dotnet ef migrations add InitialMigration --context frutosecoapp.Data.ApplicationDbContext -o "C:\Users\Inteligo\Code\netcore\usmp\programacionI\demomvc\frutosecoapp\Data\Migrations"
+
+dotnet ef database update
+
+
+
+
+
